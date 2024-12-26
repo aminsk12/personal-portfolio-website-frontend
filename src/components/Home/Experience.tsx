@@ -24,17 +24,13 @@ const Experience = () => {
       {isLoading ? (
         <p className="text-center text-gray-400">Loading experiences...</p>
       ) : error ? (
-        <p className="text-lg text-black text-center">
+        <p className="text-lg text-white text-center">
           {" "}
-          I am a recent graduate eager to leverage my skills and knowledge in a
-          professional setting. I am a quick learner and highly motivated to
-          contribute to a dynamic team.
+          No Data found
         </p>
       ) : experiences.length === 0 ? (
-        <p className="text-lg text-black text-center">
-          I am a recent graduate eager to leverage my skills and knowledge in a
-          professional setting. I am a quick learner and highly motivated to
-          contribute to a dynamic team.
+        <p className="text-lg text-white text-center">
+          No data found
         </p>
       ) : (
         <div className="space-y-8">

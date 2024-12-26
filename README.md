@@ -1,7 +1,8 @@
-# eShop
 
+## Personal protfolio 
 
-## Frontend Live Link: https://eshop-application-zeta.vercel.app/
+## Portfolio Live site Link: https://portfolio-frontend-three-plum.vercel.app/
 
-## Backend Live Link:https://protfolio-server-xi.vercel.app
+## Portfolio Dashboard Live Link: https://dasboard-admin-tau.vercel.app/
 
+## Live Link: https://protfolio-server-xi.vercel.app/
