@@ -3,7 +3,7 @@ import { RootState } from '../store';
 import { logout, setUser } from '../features/auth/authSlice';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'https://protfolio-server-xi.vercel.app/api',
+  baseUrl: 'https://personalbackend-chi.vercel.app/api',
   credentials: 'include',
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.token;
@@ -27,7 +27,7 @@ const baseQueryWithRefreshToken: BaseQueryFn<
   if (result?.error?.status === 401) {
 
 
-    const res = await fetch('https://protfolio-server-xi.vercel.app/api/auth/refresh-token', {
+    const res = await fetch('https://personalbackend-chi.vercel.app/api/auth/refresh-token', {
       method: 'POST',
       credentials: 'include',
     });

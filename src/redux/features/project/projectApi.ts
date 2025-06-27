@@ -4,7 +4,7 @@ const projectApi = baseApi.injectEndpoints({
     endpoints: (builder) =>({
         getAllProjects: builder.query({
             query: () => ({
-                url: `/projects`,
+                url: '/projects',
                 method: 'GET',
 
             }),

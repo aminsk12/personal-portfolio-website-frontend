@@ -1,19 +1,19 @@
-
-
 import Footer from "@/components/shared/Footer";
+import Navbar from "@/components/shared/Navber";
+import ScrollToTopButton from "@/components/shared/ScrollToTop";
 
-import React from "react";
 
-const layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-   
-      <main className="w-full bg-cyan-900  min-h-screen">
+      <Navbar />
+      <main className="w-full bg-white dark:bg-cyan-900 min-h-screen">
         <div className="">{children}</div>
+        <ScrollToTopButton />
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
-export default layout;
+export default Layout;

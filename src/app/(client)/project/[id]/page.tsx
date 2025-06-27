@@ -37,53 +37,51 @@ const Page = () => {
         <div className="p-6">
           {/* Project Description */}
           <h1 className="text-2xl font-bold text-white mb-4">
-            {project?.data?.title}
+            {project?.data?.name}
           </h1>
 
-          <p className="text-gray-300 text-sm leading-relaxed mb-4">
+           <p className="text-gray-300 text-sm leading-relaxed mb-4">
             {project?.data?.description}
-          </p>
+          </p> 
 
-          <p className="text-gray-400 text-sm leading-relaxed mb-6">
+           <p className="text-gray-400 text-sm leading-relaxed mb-6">
             {project?.data?.details}
-          </p>
+          </p> 
 
           {/* Links Section */}
           <div className="flex items-center space-x-4">
-            {project?.data?.liveSite && (
-              <Link href={project.data.liveSite}>
-                <a
-                  className="flex items-center space-x-2 text-sm text-gray-200 hover:text-blue-500 transition-colors"
+            {project?.data?.liveUrl && (
+              <Link href={project?.data?.liveUrl}
+              className="flex items-center space-x-2 text-sm text-gray-200 hover:text-blue-500 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
+              >
+                
                   <Globe className="w-5 h-5" />
                   <span>Live Site</span>
-                </a>
+                
               </Link>
             )}
-            {project?.data?.clientCode && (
-              <Link href={project.data.clientCode}>
-                <a
-                  className="flex items-center space-x-2 text-sm text-gray-200 hover:text-blue-500 transition-colors"
+            {project?.data?.frontendUrl&& (
+              <Link href={project?.data?.frontendUrl}
+              className="flex items-center space-x-2 text-sm text-gray-200 hover:text-blue-500 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
+              >
                   <FaGithub className="w-5 h-5" />
                   <span>Client Code</span>
-                </a>
+                
               </Link>
             )}
-            {project?.data?.serverCode && (
-              <Link href={project.data.serverCode}>
-                <a
-                  className="flex items-center space-x-2 text-sm text-gray-200 hover:text-blue-500 transition-colors"
+            {project?.data?.backendUrl&& (
+              <Link href={project.data.backendUrl}
+               className="flex items-center space-x-2 text-sm text-gray-200 hover:text-blue-500 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
+              >
                   <FaGithub className="w-5 h-5" />
                   <span>Server Code</span>
-                </a>
+                
               </Link>
             )}
           </div>

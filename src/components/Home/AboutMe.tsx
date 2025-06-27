@@ -8,7 +8,7 @@ const AboutMe= () => {
       <div className="container mx-auto px-6 md:px-12 flex flex-col items-center space-y-6">
         {/* Heading */}
         <motion.h2
-          className="text-center text-3xl md:text-4xl font-semibold text-white upper-case"
+          className="text-center  text-3xl md:text-4xl font-semibold dark:text-white upper-case"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -18,7 +18,7 @@ const AboutMe= () => {
 
         {/* Paragraph */}
         <motion.p
-          className="text-gray-300 text-center text-base md:text-lg max-w-5xl leading-relaxed text-justify"
+          className="dark:text-gray-300 text-center text-base md:text-lg max-w-5xl leading-relaxed "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -36,7 +36,7 @@ Beyond technical prowess, I'm driven by a love for learning and a commitment to 
   data-aos="fade-up"
   data-aos-duration="1000"
 >
-  <h1 className="text-4xl font-bold text-center text-white mb-8">What I Do</h1>
+  <h1 className="text-4xl font-bold text-center dark:text-white mb-8">What I Do</h1>
   {/* Service content */}
   <div className="flex flex-wrap justify-center gap-6 text-center">
     {/* Single service */}

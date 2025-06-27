@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { Locate, PhoneCall, Send } from "lucide-react";
+import { Locate, PhoneCall, MessageCircle, Send } from "lucide-react";
 import { useRef, useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { toast } from "sonner";
@@ -44,7 +44,7 @@ export default function ContactUs() {
 
   return (
       <main className="max-w-5xl mx-auto px-4 py-12">
-          <section className="bg-white rounded-lg px-6 py-8 md:px-8 md:py-10 lg:p-12">
+          <section className="dark:bg-white bg-cyan-100 rounded-lg px-6 py-8 md:px-8 md:py-10 lg:p-12">
               <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-5"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -65,19 +65,25 @@ export default function ContactUs() {
                       <div className="flex items-center mt-8 text-black">
                          <Locate/>
                           <div className="ml-4 text-md">
-                              Gulshan, Dhaka, Bangladesh
+                              Kolkta, West Bangal, India
                           </div>
                       </div>
                       <div className="flex items-center mt-4 text-black">
                          <PhoneCall/>
                           <div className="ml-4 text-md">
-                              +880 1902120503
+                              +91 8101718317
+                          </div>
+                      </div>
+                      <div className="flex items-center mt-4 text-black">
+                         <MessageCircle />
+                          <div className="ml-4 text-md">
+                              +91 7047408860
                           </div>
                       </div>
                       <div className="flex items-center mt-2 text-black">
                          <MdEmail/>
                           <div className="ml-4 text-md">
-                             1aklimakter@gmail.com
+                             aminskeh786@gmail.com
                           </div>
                       </div>
                      

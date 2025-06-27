@@ -1,41 +1,36 @@
 "use client";
+import { useState } from 'react';
+import { HiDownload } from "react-icons/hi"; // ✅ Import React Icon
+
 const ResumeDownload = () => {
-  const handleDownload = async () => {
-    const fileUrl = "http://localhost:3000/file/CV_Aklima_Akter_work.pdf";
+  const [isLoading, setIsLoading] = useState(false);
 
+  const handleDownload = () => {
+    setIsLoading(true);
     try {
-      // Fetch the file
-      const response = await fetch(fileUrl);
-      if (!response.ok) {
-        throw new Error("Failed to fetch the file.");
-      }
-
-      // Convert the response to a Blob
-      const blob = await response.blob();
-
-      // Create a URL for the Blob
-      const blobUrl = URL.createObjectURL(blob);
-
-      // Create an anchor element
       const link = document.createElement("a");
-      link.href = blobUrl;
-      link.download = "CV_Aklima_Akter_work.pdf";
-
-      // Append to the body and trigger the click
+      link.href = "/file/CV_AMIN_SK_WORK.pdf";
+      link.download = "CV_AMIN_SK_WORK.pdf";
       document.body.appendChild(link);
       link.click();
-
-      // Clean up
       document.body.removeChild(link);
-      URL.revokeObjectURL(blobUrl);
     } catch (error) {
-      console.error("Error downloading the file:", error);
+      alert("Download failed. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <button onClick={handleDownload} className="bg-white px-4 py-1 rounded-lg font-bold">
-    RESUME DOWNLOAD 
+    <button 
+      onClick={handleDownload}
+      disabled={isLoading}
+      className={`bg-transparent dark:text-white hover:text-white border hover:bg-cyan-900   dark:border-white flex items-center gap-2 px-6 py-2 rounded-lg font-bold transition ${
+        isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:border-green-900 dark:hover:text-black'
+      }`}
+    >
+      <HiDownload className="text-xl" />
+      {isLoading ? 'Downloading...' : 'RESUME DOWNLOAD'}
     </button>
   );
 };

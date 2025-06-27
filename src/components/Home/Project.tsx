@@ -5,7 +5,7 @@ import ProjectDisplay from "./ProjectDisplay";
 
 const AllProject = () => {
   const { data: projectsData } = useGetAllProjectsQuery("");
-
+console.log(projectsData, 'pppppppppp')
   const projects = projectsData?.data;
 console.log(projects,"check all");
 
@@ -13,7 +13,7 @@ console.log(projects,"check all");
     <div className="m-10 space-y-6 flex justify-center">
       
       <div className="">
-        <h1 className="text-center text-3xl font-semibold text-white mb-8">
+        <h1 className="text-center text-3xl font-semibold dark:text-white mb-8">
           Projects
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl">

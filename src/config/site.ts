@@ -1,11 +1,11 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  title: "Aklima Akter | Full Stack Developer Portfolio",
+  title: "Amin Sk | Full Stack Developer Portfolio",
   description:
-"Discover the portfolio of Aklima Akter, a skilled full-stack web developer with expertise in creating dynamic, user-centric web applications and building scalable backend solutions for seamless user experiences.",      
+"Discover the portfolio of Amin Sk, a skilled full-stack web developer with expertise in creating dynamic, user-centric web applications and building scalable backend solutions for seamless user experiences.",      
 keywords: [
-  "Aklima Akter portfolio",
+  "Amin Sk portfolio",
   "Full stack developer",
   "Web developer",
   "Next.js developer",
@@ -28,6 +28,10 @@ keywords: [
       label: "Contact",
       href: "/contact",
     },
+    {
+      label: "Project",
+      href: "/project",
+    },
   ],
   navMenuItems: [
     {
@@ -43,8 +47,9 @@ keywords: [
       href: "/contact",
     },
     {
-      label: "Login",
-      href: "/login",
+      label: "Project",
+      href: "/project",
     },
+    
   ],
 };

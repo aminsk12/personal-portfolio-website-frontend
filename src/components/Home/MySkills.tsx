@@ -1,7 +1,8 @@
 "use client"
 import { motion } from "framer-motion";
-import { useGetAllSkillsQuery } from "@/redux/features/skill/skillApi";
+
 import { ISkill } from "@/types";
+import { useGetAllSkillsQuery } from "@/redux/features/skill/skillApi";
 
 
 const Skills = () => {
@@ -35,11 +36,11 @@ const softSkills = [
   
 
   return (
-    <section className="py-16 text-white ">
+    <section className="py-16 dark:text-white ">
       <div className="container mx-auto text-center max-w-5xl">
         {/* Technical Skills Section */}
         <motion.h2
-          className="text-center text-3xl font-semibold text-white mb-8"
+          className="text-center text-3xl font-semibold  mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -89,7 +90,7 @@ const softSkills = [
 
         {/* Soft Skills Section */}
         <motion.h2
-          className="text-center text-3xl font-semibold text-white mt-5 mb-8"
+          className="text-center text-3xl font-semibold dark:text-white mt-8 mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}

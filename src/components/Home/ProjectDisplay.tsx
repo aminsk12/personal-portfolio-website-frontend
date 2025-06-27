@@ -20,9 +20,9 @@ const ProjectDisplay = ({ project }: any) => {
       {/* Project Title */}
       <h3 className="text-lg font-bold mb-2">{project?.name || "Untitled Project"}</h3>
       {/* Project Description */}
-      <p className="text-sm text-gray-300 mb-4 text-center"
+      {/* * <p className="text-sm  mb-4 text-center"
       dangerouslySetInnerHTML={{ __html: project?.description }}
-      />
+      />  */}
       {/* Buttons */}
       <div className="flex space-x-6 items-center">
         <div className="flex space-x-2">

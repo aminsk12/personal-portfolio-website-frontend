@@ -8,7 +8,7 @@ const nextConfig = {
         },
         {
           protocol: "https",
-          hostname: "https://firebasestorage.googleapis.com",
+          hostname: "firebasestorage.googleapis.com",
         },
         {
           protocol: "http",
@@ -16,7 +16,7 @@ const nextConfig = {
         },
         {
           protocol: "https",
-          hostname: "https://i.pravatar.cc",
+          hostname: "i.pravatar.cc",
         }
        
       ],
